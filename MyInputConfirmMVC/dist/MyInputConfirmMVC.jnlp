@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MyInputConfirmMVC.jnlp">
+  <information>
+    <title>MyInputConfirmMVC</title>
+    <vendor>angel</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MyInputConfirmMVC.jar" size="4139" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="myinputconfirmmvc.Main"  name="MyInputConfirmMVC" />
+  <update check="always"/>
+</jnlp>

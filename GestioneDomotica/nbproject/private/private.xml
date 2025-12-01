@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/azioni/Azione.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/Impianto.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/SensoreLuminosità.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/Attuatore.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/LuceRegolabile.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/SensoreTemperatura.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/eccezioni/LivelloNonValidoException.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/condizioni/Condizione.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/Regola.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/Sensore.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/Condizionatore.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/condizioni/CondizioneMinoreDi.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/azioni/ImpostaLivello.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/Luce.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/azioni/ImpostaStatoAccensione.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/TestImpianto.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/Dispositivo.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/condizioni/CondizioneMaggioreDi.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDomotica/src/gestionedomotica/dispositivi/AttuatoreRegolabile.java</file>
+        </group>
+    </open-files>
+</project-private>

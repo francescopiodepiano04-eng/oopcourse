@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TestFXAH.jnlp">
+  <information>
+    <title>TestFXAH</title>
+    <vendor>angel</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TestFXAH.jar" size="3206" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="myknotconverter.Main"  name="TestFXAH" />
+  <update check="always"/>
+</jnlp>

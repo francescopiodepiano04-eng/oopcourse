@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/MobileCPUType.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/DeviceStore.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/DeviceFilter.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/Filterable.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/GestioneDevice.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/HighStorageDeviceFilter.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/Notebook.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/Smartphone.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/NBScreenType.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/Device.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/DeviceInsertionException.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/CPUType.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/DeviceReleaseDateComparator.java</file>
+            <file>file:/C:/Users/angel/Documents/NetBeansProjects/GestioneDevice/src/gestionedevice/NotebookFilter.java</file>
+        </group>
+    </open-files>
+</project-private>
