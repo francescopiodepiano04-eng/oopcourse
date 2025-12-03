@@ -3,39 +3,44 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prodconsumer.threadsafe;
-
+package prodconsumer.notthreadsafe;
 
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-
 
 /**
  *
  * @author angel
  */
 public class Producer implements Runnable{
-    private int periodo;
     private Buffer<String> buffer;
+    private int periodo;
     
     public Producer(Buffer<String> buffer, int periodo){
-        this.periodo=periodo;
         this.buffer=buffer;
+        this.periodo=periodo;
     }
 
     @Override
     public void run() {
-        Random n = new Random(12400);
+        Random n = new Random(12500);
         while(!Thread.currentThread().isInterrupted()){
+            
             try {
                 Thread.sleep(periodo);
-                String msg = "Info "+n.nextInt(10);
-                buffer.add(msg);
-                System.out.println(Thread.currentThread().getName()+" ha inserito "+msg);
+                String msg = "Info " + n.nextInt(10);
+                synchronized(buffer){
+                    while(buffer.isFull()){
+                        buffer.wait();
+                    }
+                    buffer.add(msg);
+                    System.out.println(Thread.currentThread().getName()+" ha inserito "+msg);
+                    buffer.notifyAll();
+                }
+                
             } catch (InterruptedException ex) {
-                Logger.getLogger(Producer.class.getName()).log(Level.SEVERE, null, ex);
+                return;
             }
         }
     }

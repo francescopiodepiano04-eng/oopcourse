@@ -18,9 +18,9 @@ public class TestThreadSafe {
         // TODO code application logic here
         Buffer<String> buffer = new Buffer<>(3);
         
-        Thread p1 = new Thread(new Producer(buffer, 2000));
-        Thread c1 = new Thread(new Consumer(buffer, 1000));
-        Thread c2 = new Thread(new Consumer(buffer, 1500));
+        Thread p1 = new Thread(new Producer(buffer, 1000));
+        Thread c1 = new Thread(new Consumer(buffer, 3000));
+        Thread c2 = new Thread(new Consumer(buffer, 2000));
         
         p1.setName("Producer 1");
         c1.setName("Consumer 1");

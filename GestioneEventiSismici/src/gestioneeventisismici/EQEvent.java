@@ -150,7 +150,7 @@ public class EQEvent implements Comparable<EQEvent> {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final EQEvent other = (EQEvent) obj;
+        EQEvent other = (EQEvent) obj;
         if (!Objects.equals(this.eventID, other.eventID)) {
             return false;
         }

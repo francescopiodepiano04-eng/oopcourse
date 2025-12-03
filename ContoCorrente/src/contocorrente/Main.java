@@ -20,7 +20,7 @@ public class Main {
         ContoCurrent c = new ContoCurrent(1000);
         
         Thread t1 = new Thread(new GuadagnaGuadagna(c, 3000));
-        Thread t2 = new Thread(new SpendiSpendi(c, 3000));
+        Thread t2 = new Thread(new SpendiSpendi(c, 1000));
         Checker check = new Checker(500);
         
         check.add(t1);
