@@ -2,11 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="JavaFX_Greco">
+            <file>file:/C:/Users/39392/Desktop/TestGit/MyStudentListAH/src/mystudentlistah/MyStudentListViewController.java</file>
+        </group>
         <group>
             <file>file:/C:/Users/angel/Documents/NetBeansProjects/MyStudentListAH/src/mystudentlistah/Main.java</file>
             <file>file:/C:/Users/angel/Documents/NetBeansProjects/MyStudentListAH/src/mystudentlistah/MyStudentListViewController.java</file>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/MyStudentListAH/src/mystudentlistah/MyStudentListView.fxml</file>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/MyStudentListAH/src/mystudentlistah/Student.java</file>
         </group>
     </open-files>
 </project-private>

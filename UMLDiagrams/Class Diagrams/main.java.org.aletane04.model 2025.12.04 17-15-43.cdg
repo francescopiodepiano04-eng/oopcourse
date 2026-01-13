@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.org.aletane04.model">
+  <ClassDiagramComponents>
+    <Class name="Libro" package="org.aletane04.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="titolo" type="String" visibility="private"/>
+        <Field name="autori" type="String" visibility="private"/>
+        <Field name="annoPubblicazione" type="LocalDate" visibility="private"/>
+        <Field name="codiceISBN" type="String" visibility="private" isFinal="true"/>
+        <Field name="numeroCopieDisponibili" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titolo"/>
+          <Argument type="String" name="autori"/>
+          <Argument type="int" name="annoPub"/>
+          <Argument type="int" name="mesePub"/>
+          <Argument type="int" name="giornoPub"/>
+          <Argument type="String" name="codiceISBN"/>
+          <Argument type="int" name="numeroCopie"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="rigaCSV"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitolo" returnType="String" visibility="public"/>
+        <Method name="getAutori" returnType="String" visibility="public"/>
+        <Method name="getAnnoPubblicazione" returnType="LocalDate" visibility="public"/>
+        <Method name="getCodiceISBN" returnType="String" visibility="public"/>
+        <Method name="getNumeroCopieDisponibili" returnType="int" visibility="public"/>
+        <Method name="setTitolo" returnType="void" visibility="public">
+          <Argument type="String" name="titolo"/>
+        </Method>
+        <Method name="setAutori" returnType="void" visibility="public">
+          <Argument type="String" name="autori"/>
+        </Method>
+        <Method name="setAnnoPubblicazione" returnType="void" visibility="public">
+          <Argument type="int" name="annoPub"/>
+          <Argument type="int" name="mesePub"/>
+          <Argument type="int" name="giornoPub"/>
+        </Method>
+        <Method name="setNumeroCopieDisponibili" returnType="void" visibility="public">
+          <Argument type="int" name="q"/>
+        </Method>
+        <Method name="decrementaNumeroCopieDisponibili" returnType="void" visibility="public"/>
+        <Method name="incrementaNumeroCopieDisponibili" returnType="void" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toCSV" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Prestito" package="org.aletane04.model" visibility="public" xPosition="293.0" yPosition="588.0">
+      <Fields>
+        <Field name="myUtente" type="Utente" visibility="private"/>
+        <Field name="myLibro" type="Libro" visibility="private"/>
+        <Field name="dataInizio" type="LocalDate" visibility="private"/>
+        <Field name="dataFine" type="LocalDate" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Utente" name="u"/>
+          <Argument type="Libro" name="l"/>
+          <Argument type="LocalDate" name="dI"/>
+          <Argument type="LocalDate" name="dF"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUtente" returnType="Utente" visibility="public"/>
+        <Method name="getLibro" returnType="Libro" visibility="public"/>
+        <Method name="getDataInizio" returnType="LocalDate" visibility="public"/>
+        <Method name="getDataFine" returnType="LocalDate" visibility="public"/>
+        <Method name="getStatoPrestito" returnType="String" visibility="public"/>
+        <Method name="setUtente" returnType="void" visibility="public">
+          <Argument type="Utente" name="u"/>
+        </Method>
+        <Method name="setLibro" returnType="void" visibility="public">
+          <Argument type="Libro" name="l"/>
+        </Method>
+        <Method name="setDataInizio" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="dI"/>
+        </Method>
+        <Method name="setDataFine" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="dF"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Utente" package="org.aletane04.model" visibility="public" xPosition="731.0" yPosition="226.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cognome" type="String" visibility="private"/>
+        <Field name="matricola" type="String" visibility="private" isFinal="true"/>
+        <Field name="email" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="cognome"/>
+          <Argument type="String" name="matricola"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="rigaCSV"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="getCognome" returnType="String" visibility="public"/>
+        <Method name="getMatricola" returnType="String" visibility="public"/>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="setCognome" returnType="void" visibility="public">
+          <Argument type="String" name="cognome"/>
+        </Method>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toCSV" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="StatoPrestito" package="org.aletane04.model" visibility="public" xPosition="745.0" yPosition="669.0">
+      <Literals>
+        <Literal name="ATTIVO"/>
+        <Literal name="IN_SCADENZA"/>
+        <Literal name="SCADUTO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="myLibro" source="org.aletane04.model.Prestito" target="org.aletane04.model.Libro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="org.aletane04.model.Prestito" target="org.aletane04.model.Utente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="org.aletane04.model.Prestito" target="org.aletane04.model.Libro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="myUtente" source="org.aletane04.model.Prestito" target="org.aletane04.model.Utente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

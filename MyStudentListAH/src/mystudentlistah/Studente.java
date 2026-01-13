@@ -7,40 +7,46 @@ package mystudentlistah;
 
 /**
  *
- * @author angel
+ * @author laywork
  */
-public class Student {
-    
-    private String name;
+//la tableview gestisce osservabili
+public class Studente {
     //private StringProperty name;
+    private String name;
     private String surname;
     private String code;
 
-    public Student(String name, String surname, String code) {
+    public Studente(String name, String surname, String code) {
         this.name = name;
-        //this.name = new SimpleStringProperty
+        //this.name = new SimpleStringProperty(name);
         this.surname = surname;
         this.code = code;
     }
 
     public String getName() {
         return name;
+        
+        //return name.get();
+    }
+    
+    /*
+    public StringProperty nameProperty() {return name;}
+    */
+    
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSurname() {
         return surname;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getCode() {
+        return code;
     }
 
     public void setCode(String code) {
@@ -49,9 +55,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "name=" + name + ", surname=" + surname + ", code=" + code + '}';
+        return "Studente{" + "name=" + name + ", surname=" + surname + ", code=" + code + "}";
     }
-    
-    
     
 }

@@ -13,12 +13,12 @@ import java.time.LocalDate;
  * @author angel
  */
 public class EsameSuperato implements Comparable<EsameSuperato>, Serializable{
-    private final String matricolaStudente;
-    private final LocalDate giornoSuperamento;
-    private final String nomeInsegnamento;
-    private final int voto;
+    private String matricolaStudente;
+    private LocalDate giornoSuperamento;
+    private String nomeInsegnamento;
+    private int voto;
     private static int cont = 0;
-    private final int id;
+    private int id;
     
     public EsameSuperato(String matricolaStudente, LocalDate giornoSuperamento, String nomeInsegnamento, int voto){
         this.giornoSuperamento=giornoSuperamento;
@@ -33,20 +33,40 @@ public class EsameSuperato implements Comparable<EsameSuperato>, Serializable{
         return matricolaStudente;
     }
     
+    public void setMatricolaStudente(String mat){
+        this.matricolaStudente=mat;
+    }
+    
     public LocalDate getGiornoSuperamento(){
         return giornoSuperamento;
+    }
+    
+    public void setGiornoSuperamento(LocalDate giornoSup){
+        this.giornoSuperamento=giornoSup;
     }
     
     public String getNomeInsegnamento(){
         return nomeInsegnamento;
     }
     
+    public void setNomeInsegnamento(String insegn){
+        this.nomeInsegnamento=insegn;
+    }
+    
     public int getVoto(){
         return voto;
     }
     
+    public void setVoto(int voto){
+        this.voto=voto;
+    }
+    
     public int getID(){
         return id;
+    }
+    
+    public void setID(int id){
+        this.id=id;
     }
     
     @Override
@@ -70,5 +90,10 @@ public class EsameSuperato implements Comparable<EsameSuperato>, Serializable{
         if(this.getID()>o.getID()) return 1;
         if(this.getID()==o.getID()) return 0;
         return -1;
+    }
+    
+    @Override
+    public String toString(){
+        return "*Esame superato*" +"\nmatricola = " + matricolaStudente + "\ndataSuperamento = "+giornoSuperamento+"\nnomeEsame = "+nomeInsegnamento+"\nvoto="+voto;
     }
 }

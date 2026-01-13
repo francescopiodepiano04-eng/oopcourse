@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author angel
+ * @author laywork
  */
 public class Main extends Application {
     
@@ -21,11 +21,10 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MyStudentListView.fxml"));
         
-        
         Scene scene = new Scene(root);
         
-        stage.setScene(scene);
         stage.setTitle("Elenco Studenti");
+        stage.setScene(scene);
         stage.show();
     }
 

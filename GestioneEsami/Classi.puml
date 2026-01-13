@@ -1,0 +1,20 @@
+@startuml
+annotation java.lang.Override
+class gestioneesami.EsameSuperato
+class gestioneesami.LibrettoEsami
+class gestioneesami.Main
+class java.time.LocalDate
+class java.util.HashMap
+class java.util.List
+class java.util.Map
+interface java.io.Serializable
+interface java.lang.Comparable
+gestioneesami.EsameSuperato ..> java.lang.Override
+gestioneesami.EsameSuperato ..> java.time.LocalDate
+gestioneesami.EsameSuperato ..> java.io.Serializable
+gestioneesami.EsameSuperato --|> java.lang.Comparable
+gestioneesami.LibrettoEsami ..> java.util.HashMap
+gestioneesami.LibrettoEsami ..> java.util.List
+gestioneesami.LibrettoEsami ..> java.util.Map
+gestioneesami.LibrettoEsami --|> java.io.Serializable
+@enduml

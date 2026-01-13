@@ -6,6 +6,7 @@
 package gestioneeventisismici;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -94,15 +95,27 @@ public class EQReport {
     public static EQReport readFromTextFileBis(String filename) {
         EQReport eqr = new EQReport("Report from textfile:"+filename);
         try(Scanner s = new Scanner(new BufferedReader(new FileReader(filename)))){
-            s.useDelimiter("[;\n]");
+            EQEvent e;
+            s.useDelimiter("\\||\\n");
             s.useLocale(Locale.US);
             if(s.nextLine()==null) return null;
             while(s.hasNext()){
-                String eventID = s.next();
-                String time = s.next();
-                double latitude = s.nextDouble();
-                double longitude = s.nextDouble();
+                e = new EQEvent();
+                e.setEventID(s.next());
+                e.setTime(LocalDateTime.parse(s.next()));
+                e.setLatitude(s.nextDouble());
+                e.setLongitude(s.nextDouble());
+                e.setDepthkm(s.nextDouble());
+                e.setAuthor(s.next());
+                e.setCatalog(s.next());
+                e.setContributor(s.next());
+                e.setContributorID(s.next());
+                e.setMagType(s.next());
+                e.setMagnitude(s.nextDouble());
+                e.setMagAuthor(s.next());
+                e.setEventLocationName(s.next());
                 
+                eqr.addEvent(e);
             }
         }catch(IOException ex){
             Logger.getLogger(EQReport.class.getName()).log(Level.SEVERE, null, ex);
@@ -111,21 +124,20 @@ public class EQReport {
     }
     
     public static void printToTextFile(EQReport eqr, String filename){
-        try( PrintWriter pw = new PrintWriter(new FileWriter(filename)) ){
+        try(BufferedWriter pw = new BufferedWriter(new FileWriter(filename))){
             
-            pw.println("EVENT ID;TIME;;MATRICOLA;VOTOMEDIO");
-            for(EQEvent e : eqr){
-                pw.append(e.getEventID());
-                pw.append(';');
-                pw.append(e.getTime());
-                
-                
+            for(EQEvent e : eqr.report) {
+                pw.write(e.getEventID() + '|' + e.getTime()+ '|'+e.getLatitude() + '|'+e.getLongitude()+ '|' + e.getDepthkm()+ '|' +
+                                e.getAuthor() + '|'+e.getCatalog()+ '|'+e.getContributor() +'|'+e.getContributorID()+ '|'+
+                                e.getMagType()+ '|'+e.getMagnitude()+ '|'+e.getMagAuthor() + '|' +e.getEventLocationName()+ '\n');
             }
             
         } catch (IOException ex) {
             Logger.getLogger(EQReport.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    
     
     
 }
